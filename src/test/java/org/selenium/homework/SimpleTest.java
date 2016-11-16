@@ -4,6 +4,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
+import static org.selenium.homework.webdriver.WebDriverProvider.destroy;
 import static org.selenium.homework.webdriver.WebDriverProvider.getWebDriver;
 
 /**
@@ -20,6 +21,7 @@ public class SimpleTest {
     @AfterClass
     public void afterMethod(){
         getWebDriver().quit();
+        destroy();
     }
 
 }

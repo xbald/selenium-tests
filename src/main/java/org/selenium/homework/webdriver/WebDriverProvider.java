@@ -25,4 +25,7 @@ public class WebDriverProvider {
         }
         return webDriverThreadLocal.get();
     }
+    public static void destroy() {
+        webDriverThreadLocal.set(null);
+    }
 }
